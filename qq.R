@@ -10,7 +10,7 @@ data1 %>% str
 data1$date=data1$date %>% as.Date()
 
 ########################一個月內沒寄件的名字
-savename=function(x){
+safename=function(x){
   a=data1 %>% arrange(desc(date)) %>% group_by(name) %>% do(h=Sys.Date()-.$date[1])
   a1=a$h %>% unlist()
   a$name[a1>34]
@@ -28,6 +28,6 @@ halfcount=function(x){
   data.frame(name=a$name,count=a$h %>% unlist %>% as.numeric() )
 }
 
-savename(data1)
+safename(data1)
 halfcount(data1)
 
