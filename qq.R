@@ -2,7 +2,7 @@ library(plyr)
 library(dplyr)
 library(magrittr)
 
-data1=read.table('c:/Users/TSR/Desktop/掏寶資料/掏寶寄件人.txt',stringsAsFactors =F)
+data1=read.table('c:/Users/TSR/Desktop/tobo/掏寶寄件人.txt',stringsAsFactors =F)
 data1
 names(data1)=c('date','name','local')
 
